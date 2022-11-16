@@ -1,0 +1,24 @@
+{
+  "name": "fibre-icons",
+  "version": "0.1.0",
+  "description": "Fibre Icons by SPYBOX",
+  "main": "index.js",
+  "author": "dominicom <dominik.kiepuszewski@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "prepare": "node index.js",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "devDependencies": {
+    "@svgr/core": "^6.5.1"
+  },
+  "dependencies": {
+    "@svgr/plugin-jsx": "^6.5.1",
+    "@svgr/plugin-prettier": "^6.5.1",
+    "@svgr/plugin-svgo": "^6.5.1",
+    "nodemon": "^2.0.20"
+  }
+}
