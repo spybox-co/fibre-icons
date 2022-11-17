@@ -19,6 +19,7 @@
     "@svgr/plugin-jsx": "^6.5.1",
     "@svgr/plugin-prettier": "^6.5.1",
     "@svgr/plugin-svgo": "^6.5.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "svgo": "^3.0.1"
   }
 }

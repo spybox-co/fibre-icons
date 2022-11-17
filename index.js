@@ -9,6 +9,7 @@ const { promisify } = require("util");
 const asyncReadFile = promisify(readFile);
 const asyncWriteFile = promisify(writeFile);
 const { transform } = require("@svgr/core");
+const { optimize } = require('svgo');
 // const fs = require("fs");
 
 const sourceFolder = "./src/icons/svg";
@@ -16,10 +17,9 @@ const destFolder = "src/icons/react";
 
 const fileType = 'js';
 
-// const uf = (string) => {
-//   if (string !== undefined)
-//     return string[0].toUpperCase() + string.substring(1);
-// };
+// @See: private Github Package
+// https://www.youtube.com/watch?v=2-77KhGWlRg
+
 const nameToReactComponent = (string) => {
   return string[0].toUpperCase() + string.substring(1).replace('.svg', '').replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
@@ -39,11 +39,20 @@ readdirSync(sourceFolder).forEach((file) => {
     // since fs.readFile returns a buffer, we should probably convert it to a string.
     const svgCode = data.toString(); // with write() need to buffer
 
+    const result = await optimize(
+      svgCode, {
+        // optional but recommended field
+        path: path,
+        // all config fields are also available here
+        multipass: true,
+      });
+    const optimizedSvgCode = result.data;
+
     const jsCode = await transform(
       svgCode,
       {
         plugins: [
-          // "@svgr/plugin-svgo",
+          "@svgr/plugin-svgo",
           "@svgr/plugin-jsx",
           "@svgr/plugin-prettier",
         ],
@@ -52,12 +61,13 @@ readdirSync(sourceFolder).forEach((file) => {
       { componentName: componentName }
     );
     console.log("----------");
-    console.log(jsCode);
+    // console.log(jsCode);
+    console.log(optimizedSvgCode);
     console.log("----------");
-    console.log("component:", componentName);
+    // console.log("component:", componentName);
     console.log("file:", dest);
 
-    await asyncWriteFile(dest, jsCode);
+    // await asyncWriteFile(dest, jsCode);
 
     // await asyncWriteFile("src/icons/react/" + componentName + ".jsx", jsCode);
   };
