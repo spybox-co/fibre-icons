@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: rgba(255, 255, 255, 1);
+}
+
+.App {
+  font-family: sans-serif;
+  padding: 2rem;
+}
+.large {
+  width: 36rem;
+  height: 36rem;
+}
+
+.big {
+  width: 6rem;
+  height: 6rem;
+}
+.medium {
+  width: 3rem;
+  height: 3rem;
+}

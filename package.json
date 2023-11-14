@@ -7,11 +7,25 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "nodemon index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "develop": "nodemon export.js",
     "prepare": "node index.js",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "build:icons": "echo This is a static template, there is no bundler or bundling involved!"
   },
+  "keywords": [
+    "react",
+    "react-icons",
+    "fibre-icons",
+    "icons",
+    "svg",
+    "SPYBOX",
+    "Fibre",
+    "FibreIconPack",
+    "design"
+  ],
   "devDependencies": {
     "@svgr/core": "^6.5.1"
   },
@@ -19,7 +33,23 @@
     "@svgr/plugin-jsx": "^6.5.1",
     "@svgr/plugin-prettier": "^6.5.1",
     "@svgr/plugin-svgo": "^6.5.1",
+    "extract-svg-path": "^2.1.0",
     "nodemon": "^2.0.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "svgo": "^3.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

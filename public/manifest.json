@@ -1,0 +1,45 @@
+{
+  "short_name": "Fibre Icons",
+  "name": "SPYBOX Fibre Icons",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./images/logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 1
+    },
+    {
+      "src": "./images/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": 1
+    },
+    {
+      "src": "./images/logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "density": 1
+    },
+    {
+      "src": "./images/logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "density": 1
+    },
+    {
+      "src": "./images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "density": 1
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#002D9C",
+  "background_color": "#002D9C"
+}
