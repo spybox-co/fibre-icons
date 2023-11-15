@@ -13,13 +13,14 @@ const OpenNew = (props) => {
       focusable="true"
       {...props}
     >
+      <title>OpenNew</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M7 2.5H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V9M14.5 1.5l-8 8M9 1.5h5.5V7"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        d="M7 2.5H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V9m1-7.5-8 8m2.5-8h5.5V7"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

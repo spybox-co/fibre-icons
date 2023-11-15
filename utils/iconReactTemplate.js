@@ -26,13 +26,14 @@ const ${props.componentName} = (props) => {
       focusable="true"
       {...props}
     >
+      <title>${props.componentName}</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="${props.pathData}"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

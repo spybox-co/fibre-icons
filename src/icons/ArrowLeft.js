@@ -13,13 +13,14 @@ const ArrowLeft = (props) => {
       focusable="true"
       {...props}
     >
+      <title>ArrowLeft</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="M6.5 3.5 2 8l4.5 4.5M2 8h13"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

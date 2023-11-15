@@ -13,13 +13,14 @@ const Search = (props) => {
       focusable="true"
       {...props}
     >
+      <title>Search</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="M11.5 6.5a5 5 0 1 1-10 0 5 5 0 0 1 10 0ZM10 10l4.5 4.5"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

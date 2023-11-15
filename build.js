@@ -64,7 +64,7 @@ readdirSync(sourceFolder).forEach((file) => {
     // const reactIcon = creactSvgIcon({ componentName: componentName, pathData: pathData });
     const reactIcon = iconReactTemplate({ componentName: componentName, pathData: pathData });
 
-    console.log("\n dupsko CZORNE!");
+    console.log("\n");
     console.log("component:", componentName);
     console.log("→", dest);
     // console.log("React component code", reactIcon);

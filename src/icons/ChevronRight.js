@@ -13,13 +13,14 @@ const ChevronRight = (props) => {
       focusable="true"
       {...props}
     >
+      <title>ChevronRight</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="m6 12 4-4-4-4"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

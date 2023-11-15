@@ -13,13 +13,14 @@ const AppsSelect = (props) => {
       focusable="true"
       {...props}
     >
+      <title>AppsSelect</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M4.5 3.5H3.5V4.5H4.5V3.5Z M4.5 7.5H3.5V8.5H4.5V7.5Z M4.5 11.5H3.5V12.5H4.5V11.5Z M8.5 7.5H7.5V8.5H8.5V7.5Z M8.5 3.5H7.5V4.5H8.5V3.5Z M12.5 7.5H11.5V8.5H12.5V7.5Z M8.5 11.5H7.5V12.5H8.5V11.5Z M12.5 3.5H11.5V4.5H12.5V3.5Z M12.5 11.5H11.5V12.5H12.5V11.5Z"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        d="M4.5 3.5h-1v1h1v-1Zm0 4h-1v1h1v-1Zm0 4h-1v1h1v-1Zm4-4h-1v1h1v-1Zm0-4h-1v1h1v-1Zm4 4h-1v1h1v-1Zm-4 4h-1v1h1v-1Zm4-8h-1v1h1v-1Zm0 8h-1v1h1v-1Z"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

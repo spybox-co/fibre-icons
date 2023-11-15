@@ -13,13 +13,14 @@ const Menu = (props) => {
       focusable="true"
       {...props}
     >
+      <title>Menu</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M2 12.5h12M2 3.5h12M2 6.5h12M2 9.5h12"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        d="M2 12.5h12m-12-9h12m-12 3h12m-12 3h12"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

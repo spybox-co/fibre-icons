@@ -1,13 +1,13 @@
 <svg
-  width={16}
-  height={16}
-  viewBox="0 0 16 16"
-  fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  {...props}
+  width="16"
+  height="16"
+  fill="none"
+  viewBox="0 0 16 16"
 >
   <path
-    d="M13.5 4V2a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v2M12.5 9.5 8 5 3.5 9.5M8 15V5"
-    stroke="#000"
+    stroke="currentColor"
+    stroke-width="1"
+    d="M13.5 4V2a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v2m10 5.5L8 5 3.5 9.5M8 15V5"
   />
-</svg>;
+</svg>

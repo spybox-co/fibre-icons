@@ -13,13 +13,14 @@ const Export = (props) => {
       focusable="true"
       {...props}
     >
+      <title>Export</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M2.5 12v2a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-2M12.5 6.5 8 2 3.5 6.5M8 2v10"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        d="M2.5 12v2a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-2m-1-5.5L8 2 3.5 6.5M8 2v10"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

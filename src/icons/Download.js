@@ -13,13 +13,14 @@ const Download = (props) => {
       focusable="true"
       {...props}
     >
+      <title>Download</title>
       <path
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M2.5 12v2a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-2M3.5 6.5 8 11l4.5-4.5M8 1v10"
-        // stroke-linecap="round" 
-        // stroke-linejoin="round"
+        d="M2.5 12v2a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-2m-10-5.5L8 11l4.5-4.5M8 1v10"
+        // stroke-linecap="square" 
+        // stroke-linejoin="square"
 
       />
     </svg>

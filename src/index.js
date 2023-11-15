@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import './styles.css';
@@ -15,9 +15,29 @@ import OverflowMenuVertical from './icons/OverflowMenuVertical';
 import Search from './icons/Search';
 import Map from './icons/Map';
 
+import Case from './icons/Case';
+
 import SettingsAdjust from './icons/SettingsAdjust';
 
 import Resources from './icons/Resources';
+
+import { parse } from 'svg-parser';
+
+
+const sample = `
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#000" d="M11.5 6.5a5 5 0 1 1-10 0 5 5 0 0 1 10 0ZM10 10l4.5 4.5"/></svg>`;
+
+const parsed = parse(sample);
+
+
+const Console = () => {
+
+  useEffect(() =>{
+    console.log(parsed.children[0].children[0].properties);
+    console.log(parsed.children[0].properties);
+  }, [parsed])
+  return null;
+}
 
 
 const IconSet = (props) => {
@@ -34,6 +54,8 @@ const IconSet = (props) => {
   }
 
 
+
+
   return (
     <>
       {title && <h2>{title}</h2>}
@@ -48,6 +70,9 @@ const IconSet = (props) => {
           <Map {...iconProps}/>
           <Export {...iconProps}/>
           <Resources {...iconProps}/>
+
+          <SettingsAdjust {...iconProps}/>
+          <Case {...iconProps}/>
 
       </div>
     </>
@@ -74,12 +99,13 @@ const IconContainer = (props) => {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <div className="App">
       <h1>Hello to Fibre Icons™ - Index page here </h1>
 
-
+      <Console />
       <div className="Intro">
         <div>
           <div>
