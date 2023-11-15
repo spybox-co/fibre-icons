@@ -151,8 +151,8 @@ const ${props.componentName} = (props) => {
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="${props.pathData}"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        // stroke-linecap="round" 
+        // stroke-linejoin="round"
 
       />
     </svg>

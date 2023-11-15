@@ -18,9 +18,9 @@ const ArrowRight = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M1 8H14M14 8L9.5 3.5M14 8L9.5 12.5"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        d="M9.5 12.5L14 8L9.5 3.5 M14 8L1 8"
+        // stroke-linecap="round" 
+        // stroke-linejoin="round"
 
       />
     </svg>

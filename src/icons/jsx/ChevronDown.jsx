@@ -19,8 +19,8 @@ const ChevronDown = (props) => {
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="M4 6L8 10L12 6"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        // stroke-linecap="round" 
+        // stroke-linejoin="round"
 
       />
     </svg>

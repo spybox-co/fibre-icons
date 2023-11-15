@@ -19,8 +19,8 @@ const Hamburger = (props) => {
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
         d="M2.66675 8H13.3334M2.66675 4H13.3334M2.66675 12H13.3334"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        // stroke-linecap="round" 
+        // stroke-linejoin="round"
 
       />
     </svg>

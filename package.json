@@ -12,7 +12,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "develop": "nodemon export.js",
-    "prepare": "node index.js",
+    "prepare": "node export.js",
     "build:icons": "echo This is a static template, there is no bundler or bundling involved!"
   },
   "keywords": [

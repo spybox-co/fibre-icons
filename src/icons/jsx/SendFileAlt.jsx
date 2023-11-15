@@ -2,7 +2,7 @@ import * as React from "react";
 
 
 
-const Download = (props) => {
+const SendFileAlt = (props) => {
 
   return (
     <svg
@@ -18,7 +18,7 @@ const Download = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M2.5 12V14C2.5 14.2761 2.72386 14.5 3 14.5H13C13.2761 14.5 13.5 14.2761 13.5 14V12 M3.5 6.5L8 11L12.5 6.5 M8 1V11"
+        d="M2.66663 8V13.3333C2.66663 13.687 2.8071 14.0261 3.05715 14.2761C3.3072 14.5262 3.64634 14.6667 3.99996 14.6667H12C12.3536 14.6667 12.6927 14.5262 12.9428 14.2761C13.1928 14.0261 13.3333 13.687 13.3333 13.3333V8 M10.6667 3.99999L8.00004 1.33333L5.33337 3.99999 M8 1.33333V10"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 
@@ -26,6 +26,6 @@ const Download = (props) => {
     </svg>
   );
 };
-export default Download;
+export default SendFileAlt;
 
   
