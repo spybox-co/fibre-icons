@@ -18,7 +18,7 @@ const Search = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5Z M10 10L14.5 14.5"
+        d="() => extract(optimizedSvgCode)"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 

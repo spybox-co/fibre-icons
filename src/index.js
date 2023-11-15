@@ -3,20 +3,75 @@ import ReactDOM from 'react-dom/client';
 
 import './styles.css';
 
-import ChevronUp from './icons/jsx/ChevronUp';
-import ArrowUp from './icons/jsx/ArrowUp';
-import Menu from './icons/jsx/Menu';
-import OpenNew from './icons/jsx/OpenNew';
-import Download from './icons/jsx/Download';
+import ChevronUp from './icons/ChevronUp';
+import ArrowUp from './icons/ArrowUp';
+import Menu from './icons/Menu';
+import OpenNew from './icons/OpenNew';
+import Download from './icons/Download';
 
-import Export from './icons/jsx/Export';
-import Hamburger from './icons/jsx/Hamburger';
-import OverflowMenuVertical from './icons/jsx/OverflowMenuVertical';
-import Search from './icons/jsx/Search';
-import Map from './icons/jsx/Map';
+import Export from './icons/Export';
+import Hamburger from './icons/Hamburger';
+import OverflowMenuVertical from './icons/OverflowMenuVertical';
+import Search from './icons/Search';
+import Map from './icons/Map';
+
+import SettingsAdjust from './icons/SettingsAdjust';
+
+import Resources from './icons/Resources';
 
 
-import Resources from './icons/jsx/Resources';
+const IconSet = (props) => {
+
+  const {
+    nonScaling,
+    type,
+    title
+  } = props;
+
+  const iconProps = {
+    nonScaling: nonScaling,
+    className: type
+  }
+
+
+  return (
+    <>
+      {title && <h2>{title}</h2>}
+      <div className="IconSet">
+
+          <Menu {...iconProps} />
+          <OpenNew {...iconProps} />
+          <ChevronUp {...iconProps}/>
+          <ArrowUp {...iconProps}/>
+
+          <Search {...iconProps}/>
+          <Map {...iconProps}/>
+          <Export {...iconProps}/>
+          <Resources {...iconProps}/>
+
+      </div>
+    </>
+  );
+}
+
+const IconContainer = (props) => {
+
+  const {
+    type,
+    title
+  } = props;
+
+  return(
+    <div>
+      {title && <h2>{title}</h2>}
+
+      <IconSet type={type} />
+      <IconSet type={type} nonScaling />
+
+
+    </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,99 +82,38 @@ root.render(
 
       <div className="Intro">
         <div>
-          <Resources className="medium" /><span>Scaling outline</span>
+          <div>
+            <OverflowMenuVertical className="medium" />
+            <Download className="medium" />
+          </div>
+          <div>
+            <Hamburger className="medium" />
+            <Resources className="medium" />
+            <span>Scaling outline</span>
+          </div>
+          
         </div>
         <div>
-          <Resources className="medium" nonScaling /><span>With <code>nonScaling</code> outline setting</span>
+
+          <div>
+            <OverflowMenuVertical className="medium" nonScaling />
+            <Download className="medium" nonScaling />
+          </div>
+          <div>
+            <Hamburger className="medium" nonScaling />
+            <Resources className="medium" nonScaling />
+            <span>With <code>nonScaling</code> outline setting</span>
+          </div>
+          
         </div>
       </div>
-      <h2>Regular icons</h2>
-      <div>
-        <Menu />
-        <OpenNew />
-        <ChevronUp />
-        <ArrowUp />
-        <Search />
-        <Map />
-        <Export />
-        <Resources />
-      </div>
-      
-      <div>
-        <Menu nonScaling />
-        <OpenNew nonScaling />
-        <ChevronUp nonScaling />
-        <ArrowUp nonScaling />
-        <Search nonScaling />
-        <Map nonScaling />
-        <Export nonScaling />
-        <Resources nonScaling />
-      </div>
-      <h2>Medium icons</h2>
-      <div>
-        <Menu className="medium" />
-        <OpenNew className="medium" />
-        <ChevronUp className="medium" />
-        <ArrowUp className="medium" />
-        <Search className="medium" />
-        <Map className="medium" />
-        <Export className="medium" />
-        <Resources className="medium" />
-      </div>
-      <div>
-        <Menu className="medium" nonScaling />
-        <OpenNew className="medium" nonScaling />
-        <ChevronUp className="medium" nonScaling />
-        <ArrowUp className="medium" nonScaling />
-        <Search className="medium" nonScaling />
-        <Map className="medium" nonScaling />
-        <Export className="medium" nonScaling />
-        <Resources className="medium" nonScaling />
-      </div>
-      <h2>Big icons</h2>
-      <div>
-        <Menu className="big" />
-        <OpenNew className="big" />
-        <ChevronUp className="big" />
-        <ArrowUp className="big" />
-        <Search className="big" />
-        <Map className="big" />
-        <Export className="big" />
-        <Resources className="big" />
-      </div>
-      <div>
-        <Menu className="big" nonScaling />
-        <OpenNew className="big" nonScaling />
-        <ChevronUp className="big" nonScaling />
-        <ArrowUp className="big" nonScaling />
-        <Search className="big" nonScaling />
-        <Map className="big" nonScaling />
-        <Export className="big" nonScaling />
-        <Resources className="big" nonScaling />
-      </div>
-      <h2>Large icons</h2>
-      <div>
-        <Menu className="large" />
-        <OpenNew className="large" />
-        <ChevronUp className="large" />
-        <ArrowUp className="large" />
-        <Search className="large" />
-        <Map className="large" />
-        <Export className="large" />
-        <Resources className="large" />
-      </div>
-      <div>
-        <Menu className="large" nonScaling />
-        <OpenNew className="large" nonScaling />
-        <ChevronUp className="large" nonScaling />
-        <ArrowUp className="large" nonScaling />
-        <Search className="large" nonScaling />
-        <Map className="large" nonScaling />
-        <Export className="large" nonScaling />
-        <Resources className="large" nonScaling />
-      </div>
 
 
+      <IconContainer title="Regular icons" />
+
+      <IconContainer title="Medium icons" type="medium" />
+      <IconContainer title="Big icons" type="big" />
+      <IconContainer title="Large icons" type="large" />
       
     </div>
 
@@ -127,3 +121,6 @@ root.render(
 
   </React.StrictMode>
 );
+
+
+

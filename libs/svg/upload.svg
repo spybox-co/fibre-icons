@@ -1,5 +1,13 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.5 4V2C13.5 1.72386 13.2761 1.5 13 1.5L3 1.5C2.72386 1.5 2.5 1.72386 2.5 2L2.5 4" stroke="black"/>
-<path d="M12.5 9.5L8 5L3.5 9.5" stroke="black"/>
-<path d="M8 15L8 5" stroke="black"/>
-</svg>
+<svg
+  width={16}
+  height={16}
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  {...props}
+>
+  <path
+    d="M13.5 4V2a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v2M12.5 9.5 8 5 3.5 9.5M8 15V5"
+    stroke="#000"
+  />
+</svg>;

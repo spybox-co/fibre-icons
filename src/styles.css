@@ -32,6 +32,10 @@ code {
 .Intro span {
   margin-left: 1rem;
 }
+
+.IconSet div {
+  display: inline-block;
+}
 .large {
   max-width: 36rem;
   max-height: 36rem;

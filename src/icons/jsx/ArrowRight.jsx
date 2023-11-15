@@ -18,7 +18,7 @@ const ArrowRight = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M9.5 12.5L14 8L9.5 3.5 M14 8L1 8"
+        d="() => extract(optimizedSvgCode)"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 

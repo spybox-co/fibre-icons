@@ -1,4 +1,10 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.5 12.5L14 8L9.5 3.5" stroke="black"/>
-<path d="M14 8L1 8" stroke="black"/>
-</svg>
+<svg
+  width={16}
+  height={16}
+  viewBox="0 0 16 16"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  {...props}
+>
+  <path d="M9.5 12.5 14 8 9.5 3.5M14 8H1" stroke="#000" />
+</svg>;

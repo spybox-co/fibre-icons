@@ -18,7 +18,7 @@ const ChevronRight = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M6 12L10 8L6 4"
+        d="() => extract(optimizedSvgCode)"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 

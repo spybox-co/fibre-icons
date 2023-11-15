@@ -18,7 +18,7 @@ const Menu = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M2 12.5H14 M2 3.5H14 M2 6.5H14 M2 9.5H14"
+        d="() => extract(optimizedSvgCode)"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 

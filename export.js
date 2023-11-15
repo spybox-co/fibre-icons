@@ -6,19 +6,24 @@ const {
   writeFileSync,
 } = require("fs");
 
+const parse = require('parse-svg-path')
 const extract = require('extract-svg-path');
 
-const template = require("./src/helpers/template");
+const svgTemplate = require('./utils/svgTemplate');
 
 const { promisify } = require("util");
 const asyncReadFile = promisify(readFile);
 const asyncWriteFile = promisify(writeFile);
 const { transform } = require("@svgr/core");
 const { optimize } = require('svgo');
-// const fs = require("fs");
 
-const sourceFolder = './libs/svg';
-const destFolder = './src/icons';
+
+const { iconTemplate } = require('./utils/iconReactTemplate');
+
+
+const sourceFolder = './opt/icon';
+const destFolder = './libs/svg';
+const componentFolder = './src/icons';
 
 
 const fileType = 'js';
@@ -58,73 +63,87 @@ readdirSync(sourceFolder).forEach((file) => {
 
   const returnSvg = async (
     path = `${sourceFolder}/${file}`,
-    dest = `${destFolder}/${createNameForReactComponent(file)}.${fileType}`
+    dest = `${destFolder}/${file}`,
+    component = `${componentFolder}/${createNameForReactComponent(file)}.${fileType}`
   ) => {
     const data = await asyncReadFile(path); // asyncReadFile
 
     // since fs.readFile returns a buffer, we should probably convert it to a string.
-    const svgCode = data.toString(); // with write() need to buffer
+    const svgCode = data; //.toString(); // with write() need to buffer
 
-    const pathData = extract(path);
-
-    const result = await optimize(
-      svgCode, {
-        path: path, // path: 'path-to.svg',
-        multipass: true,
-        removeViewBox: false
-      });
-    const optimizedSvgCode = result.data;
-
-    const jsCode = await transform(
-      optimizedSvgCode,
+    const optimizedSvgCode = await transform(
+      svgCode,
       {
         plugins: [
           "@svgr/plugin-svgo",
           "@svgr/plugin-jsx",
           "@svgr/plugin-prettier",
         ],
-        icon: false,
-        ref: false,
-        replaceAttrValues: { '#000': "currentColor" },
-        svgProps: { 
-          focusable: "true", 
+        // prettierConfig: {
+        //   semi: false,
+        // },
+        
+        // icon: false,
+        // ref: false,
+        // replaceAttrValues: { '#000': "currentColor" },
+        // svgProps: { 
+        //   focusable: "true", 
 
-        },
+        // },
         // https://github.com/gregberge/svgr/blob/main/packages/babel-plugin-transform-svg-component/src/index.ts
-        template: template,
-        icon: 16,
-        ignoreExisting: false,
+        template: svgTemplate,
+        // icon: 16,
+        // ignoreExisting: false,
       },
-      {
-        componentName: componentName, 
-        ext: "js",
-      }
+      // {
+      //   componentName: componentName, 
+      //   ext: "js",
+      // }
   
     );
+    /*
 
-    const reactIcon = creactSvgIcon({ componentName: componentName, pathData: pathData });
+
+    */
+
+
+    // const pathData = jsCode; //extract(path);
+    // const reactIcon = await creactSvgIcon({ componentName: componentName, pathData: pathData });
+
+
+    // const reactIcon = iconTemplate({ componentName: componentName, pathData: pathData });
 
     // console.log("----------");
     // console.log(jsCode);
-    // console.log(optimizedSvgCode);
+    // console.log("path:", typeof pathData, pathData);
     console.log("\n");
     // console.log("component:", componentName);
-    console.log("→", dest);
-    console.log("from path only:", reactIcon);
+    console.log("→", path);
+    console.log("∅", dest);
+    console.log("optimized code:", typeof optimizedSvgCode, optimizedSvgCode);
+    console.log(optimizedSvgCode);
 
-    // await asyncWriteFile(dest, jsCode);
+    
+    // console.log("from path only:", reactIcon);
 
-    await asyncWriteFile(destFolder + '/jsx/' + componentName + '.jsx', reactIcon);
+    await asyncWriteFile(dest, optimizedSvgCode);
+
+    
     // For test only use
+    // await asyncWriteFile(destFolder + '/jsx/' + componentName + '.jsx', reactIcon);
     // await asyncWriteFile(destFolder + '/jsx/' + componentName + '.jsx', jsCode);
     // await asyncWriteFile(destFolder + "/", jsCode);
   };
   returnSvg();
+
+
 });
 
 // https://react-svgr.com/docs/node-api/
 
 // https://github.com/carbon-design-system/carbon-icons/tree/master/src/svg
+
+
 
 
 const creactSvgIcon = (props) => {

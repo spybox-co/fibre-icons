@@ -1,7 +1,7 @@
 import * as React from "react";
 
 
-const ArrowRight = (props) => {
+const SettingsAdjust = (props) => {
 
   return (
     <svg
@@ -17,7 +17,7 @@ const ArrowRight = (props) => {
         stroke="currentColor"
         stroke-width="1"
         vector-effect={props.nonScaling ? "non-scaling-stroke" : null}
-        d="M9.5 12.5 14 8 9.5 3.5M14 8H1"
+        d="M15 4.5H7.5m-4 0H1m0 7h7.5m4 0H15M7.5 4.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM12.5 11.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
         // stroke-linecap="round" 
         // stroke-linejoin="round"
 
@@ -26,6 +26,6 @@ const ArrowRight = (props) => {
   );
 };
 
-export default ArrowRight;
+export default SettingsAdjust;
 
   
