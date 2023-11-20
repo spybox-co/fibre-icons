@@ -11,6 +11,7 @@ const { parse } = require('svg-parser');
 const extract = require('extract-svg-path');
 
 const svgTemplate = require('./utils/svgTemplate');
+// const { sourceFolder, destFolder, componentFolder } = require('./utils/helpers');
 
 const { promisify } = require("util");
 const asyncReadFile = promisify(readFile);
@@ -22,7 +23,8 @@ const { optimize } = require('svgo');
 
 
 
-const sourceFolder = './opt/icon';
+
+const sourceFolder = './opt/icons';
 const destFolder = './libs/svg';
 const componentFolder = './src/icons';
 

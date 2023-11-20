@@ -5,11 +5,13 @@ const {
 
 const extract = require('extract-svg-path');
 
-const { promisify } = require("util");
+const { promisify } = require('util');
 // const asyncReadFile = promisify(readFile);
 const asyncWriteFile = promisify(writeFile);
 // const { transform } = require("@svgr/core");
 // const { optimize } = require('svgo');
+
+// const { sourceFolder, destFolder } = require('./utils/helpers');
 
 
 const iconReactTemplate = require('./utils/iconReactTemplate');
