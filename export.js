@@ -98,7 +98,7 @@ readdirSync(sourceFolder).forEach((file) => {
     const svgCode = data; //.toString(); // with write() need to buffer
 
     const result = optimize(svgCode, {
-      path: 'path-to.svg', // recommended
+      path: path, // 'path-to.svg', // recommended
       multipass: true // all other config fields are available here
     });
 
