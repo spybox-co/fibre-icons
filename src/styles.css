@@ -36,18 +36,23 @@ code {
 .IconSet div {
   display: inline-block;
 }
-.large {
-  max-width: 36rem;
-  max-height: 36rem;
-  width: calc(100vw - 4rem);
-  height: calc(100vw - 4rem);
+
+.medium {
+  width: 3rem;
+  height: 3rem;
 }
 
 .big {
   width: 6rem;
   height: 6rem;
 }
-.medium {
-  width: 3rem;
-  height: 3rem;
+
+.large {
+  max-width: 18rem;
+  max-height: 18rem;
+  width: calc(100vw - 4rem);
+  height: calc(100vw - 4rem);
 }
+
+
+

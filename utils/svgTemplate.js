@@ -1,3 +1,17 @@
+/* 
+
+    @DOCS: Template Inspirations
+
+    https://github.com/feathericons/feather/blob/main/src/icon.js
+    https://github.com/carbon-design-system/carbon/blob/main/packages/icon-helpers/src/toSVG.js
+
+    Default ATTRs
+    https://github.com/feathericons/feather/blob/main/src/default-attrs.json
+
+*/
+
+
+
 const svgTemplate = (props) => {
 
   const {

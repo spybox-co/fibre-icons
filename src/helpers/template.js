@@ -8,7 +8,7 @@ const ${variables.componentName} = (${variables.props}) => {
 
   console.log("${variables.componentName}");
 
-  // Icon is generated with custom template
+  // Icon is generated with custom template for SVGR
 
   return (
     ${variables.jsx}

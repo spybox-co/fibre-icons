@@ -29,24 +29,6 @@ const createNameForReactComponent = (string) => {
   }).replace(/\s+/g, '').replace(/-/g, '');
 };
 
-/* 
-    @DOCS: returning SVG into React component file JSX
-*/
-// https://stackoverflow.com/questions/59327144/return-svg-from-a-function
-// https://gist.github.com/christiannaths/d165e17ef212a7a4146e51c82068ee47
-// https://stackoverflow.com/questions/54885842/how-to-copy-multiple-svg-files-into-a-templated-react-component-nodejs
-
-// https://github.com/carbon-design-system/carbon/blob/main/packages/icon-helpers/src/getAttributes.ts
-// https://github.com/carbon-design-system/carbon/blob/main/packages/icon-helpers/src/toSVG.js
-
-
-/*
-    @DOCS: SVGR Custom template
-
-
-    https://react-svgr.com/docs/custom-templates/
-*/
-
 
 console.log("List of exported Icons to React components:"); 
 
