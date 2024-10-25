@@ -1,14 +1,15 @@
 const {
   readFile,
   readdirSync,
-  write,
+  // write,
   writeFile,
-  writeFileSync,
+  // writeFileSync,
 } = require("fs");
 
 // const parse = require('parse-svg-path');
+// const path = require('path');
 const { parse } = require('svg-parser');
-const extract = require('extract-svg-path');
+// const extract = require('extract-svg-path');
 
 const svgTemplate = require('./utils/svgTemplate');
 // const { sourceFolder, destFolder, componentFolder } = require('./utils/helpers');
@@ -16,11 +17,8 @@ const svgTemplate = require('./utils/svgTemplate');
 const { promisify } = require("util");
 const asyncReadFile = promisify(readFile);
 const asyncWriteFile = promisify(writeFile);
-const { transform } = require("@svgr/core");
+// const { transform } = require("@svgr/core");
 const { optimize } = require('svgo');
-
-
-
 
 
 
@@ -30,6 +28,16 @@ const componentFolder = './src/icons';
 
 
 const fileType = 'js';
+
+const EXTENSION = '.svg';
+
+// const targetFiles = files.filter(file => {
+//     return path.extname(file).toLowerCase() === EXTENSION;
+// });
+
+// const targetFile = (file) => {
+//   return path.extname(file).toLowerCase() === EXTENSION;
+// };
 
 // @See: private Github Package
 // https://www.youtube.com/watch?v=2-77KhGWlRg
@@ -92,6 +100,7 @@ readdirSync(sourceFolder).forEach((file) => {
     dest = `${destFolder}/${file}`,
     component = `${componentFolder}/${createNameForReactComponent(file)}.${fileType}`
   ) => {
+    
     const data = await asyncReadFile(path); // asyncReadFile
 
     // since fs.readFile returns a buffer, we should probably convert it to a string.
@@ -117,6 +126,7 @@ readdirSync(sourceFolder).forEach((file) => {
     const buildSvgIcon = svgTemplate(iconProps);
 
     console.log("\n");
+    console.log("file:", path)
 
     console.log("component:", componentName, "| svg:", iconName);
 
@@ -126,7 +136,7 @@ readdirSync(sourceFolder).forEach((file) => {
 
 
 
-    await asyncWriteFile(destFolder + "/" + iconName + ".svg", buildSvgIcon);
+    await asyncWriteFile(destFolder + "/" + iconName + EXTENSION, buildSvgIcon);
   };
   returnSvg();
 
